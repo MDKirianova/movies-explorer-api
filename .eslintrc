@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:eslint-comments/recommended"
+],
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["_id"]}],
+    "eslint-comments/no-unused-disable": "error"
+  }
+}
