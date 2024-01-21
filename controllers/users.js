@@ -82,6 +82,9 @@ function updateUserInfo(req, res, next) {
       return res.status(200).send(user);
     })
     .catch((err) => {
+      if (err.name === 'MongoServerError' && err.code === 11000) {
+        return next(new ConflictError('Пользователь с такой почтой уже существует на сервере'));
+      }
       if (err.name === 'ValidationError' || err.name === 'CastError') {
         return next(new BadRequestError('Передан некорректный _id пользователя'));
       }
