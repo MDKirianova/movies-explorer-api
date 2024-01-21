@@ -1,2 +1,3 @@
 # movies-explorer-api
-IP 158.160.72.142
+IP: 51.250.31.27
+Backend url: https://api.mdkirianova.bitfilms.nomoredomainsmonster.ru

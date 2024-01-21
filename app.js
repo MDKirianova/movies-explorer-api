@@ -11,9 +11,7 @@ const limiter = require('./middlewares/rateLimiter');
 
 const { PORT = 3000 } = process.env;
 
-mongoose.connect(`${MONGO_URL}`, {
-  useNewUrlParser: true,
-});
+mongoose.connect(MONGO_URL);
 const app = express();
 
 app.use(cors());
